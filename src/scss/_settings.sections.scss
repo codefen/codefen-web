@@ -1,0 +1,43 @@
+/* Sections modules */
+section[class^=m-] {
+  width: 100%;
+  max-width: 100%;
+  margin: 0px;
+  padding: 60px 25px;
+  z-index: 5;
+
+  // start responsive
+  @include mq($from: tablet) {
+    padding: 75px 0;
+  }
+
+  @include mq($from: desktop) {
+    padding: 96px 0;
+  }
+
+  @include mq($from: desktopExtraLarge) {
+    padding: 100px 0;
+  }
+}
+
+
+/* Inner containers */
+.c-container {
+  margin-right: auto;
+  margin-left: auto;
+
+  // start responsive
+  @include mq($from: tablet, $until: desktop) {
+    max-width: 98vw;
+  }
+
+  @include mq($from: desktop, $until: desktopExtraLarge) {
+    // padding: 0px 6.4%;
+    max-width: 1285px;
+  }
+
+  @include mq($from: desktopExtraLarge) {
+    // padding: 0px 9.5%;
+    max-width: 1400px;
+  }
+}

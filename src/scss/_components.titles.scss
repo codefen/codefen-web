@@ -1,0 +1,48 @@
+/* Titles */
+.c-title-subtitle {
+  font-family: 'BigNoodleTitling';
+  font-weight: 100;
+  width: fit-content;
+
+  h3 {
+    font-size: 43px;
+    line-height: 1.25;
+    margin-bottom: 5px;    
+  }
+
+  .subtitle {
+    width: 100%;
+    padding: 5px 0px;
+    border-top: 1px solid #c9c7c7;
+    border-bottom: 1px solid #c9c7c7;   
+
+    p {
+      font-size: 26px;
+      line-height: 1.2;
+      color: #c9c7c7;
+      text-transform: uppercase;
+    }
+  }
+
+  &.f-center {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  // start responsive
+  @include mq($from: tablet) {
+
+  }
+}
+
+.c-title-text {
+  & + .c-title-text {
+    margin-top: 30px;
+  }
+  // start responsive
+  @include mq($from: tablet) {
+    & + .c-title-text {
+      margin-top: 45px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+section.m-codefen-vs {
+  //commented to avoid overlaping with red lines
+  //background-color: #f3f3f3; 
+  overflow-x: hidden;
+
+  // start responsive
+  @include mq($from: tablet) {
+    .c-container * {
+      z-index: 5;
+    }
+
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 130px;
+    }
+
+    .wrap-image {
+      max-width: 60%;
+
+      img {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .wrap-text {
+      max-width: 430px;
+      min-width: 200px;
+
+      .c-title-text:last-of-type {
+        margin-bottom: 60px;
+      }
+    }
+
+    .c-extra-bg {
+      position: absolute;
+      top: -75px;
+      bottom: -80px;
+      left: 0px;
+      right: 0px;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      z-index: 1;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+      background: linear-gradient(90deg, rgba(248,248,248,1) 0%, rgba(248,248,248,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    }
+  }
+
+  @include mq($from: desktop) {
+  }
+
+  @include mq($from: desktopExtraLarge) {
+  }
+}

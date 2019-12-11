@@ -1,0 +1,21 @@
+section.m-easy-steps {
+  z-index: 5;
+  background: linear-gradient(0deg, rgba(42,42,42,1) 30%, rgba(8,7,7,1) 100%);
+
+  // start responsive
+  @include mq($from: tablet) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    .c-container {
+      display: flex;
+      justify-content: center;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+  @include mq($from: desktopExtraLarge) {
+
+  }
+}

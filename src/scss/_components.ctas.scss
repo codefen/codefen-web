@@ -1,0 +1,40 @@
+/* Button - Default red */
+.c-btn {
+  padding: 16px 65px;
+  background-color: #ff2424;
+  color: #ffffff;
+  border-radius: 8px;
+  min-width: 190px;
+  height: 42px;
+  font-size: 15px;
+  cursor: pointer;
+  line-height: 42px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all .2s ease, background-color .2s ease;
+  text-decoration: none;
+
+  &:hover {
+  color: #ffffff;
+  background-color: #333;
+  border-width: 0;
+  text-decoration: none;
+  }
+
+  &.f-white {
+  background-color: #ffffff;
+  color: $color-one;
+  }
+
+	&.f-dark {
+	color: #ffffff;
+	background-color: #000;
+	}
+
+  &:focus {
+  text-decoration: none !important;
+  }
+
+  // start responsive
+  @include mq($from: tablet) {
+  }
+}
