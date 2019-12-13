@@ -19,15 +19,39 @@
             <form action="purchase_confirm.html">
               <div class="purchase_form_group">
                 <h3>1. organization information</h3>
-                <input type="text" class="purchase_form_field">
-                <input type="text" class="purchase_form_field">
+                <div class="field_group">
+                  <span><img src="media/form_icons/company.png" alt=""></span>
+                  <input type="text">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/web.png" alt=""></span>
+                  <input type="text">
+                  <br class="clear">
+                </div>
               </div>
               <div class="purchase_form_group">
                 <h3>2. user information</h3>
-                <input type="text" class="purchase_form_field">
-                <input type="text" class="purchase_form_field">
-                <input type="text" class="purchase_form_field">
-                <input type="text" class="purchase_form_field">
+                <div class="field_group">
+                  <span><img src="media/form_icons/user.png" alt=""></span>
+                  <input type="text">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/mail.png" alt=""></span>
+                  <input type="text">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/password.png" alt=""></span>
+                  <input type="text">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/password.png" alt=""></span>
+                  <input type="text">
+                  <br class="clear">
+                </div>
               </div>
               <input class="user_call" type="submit" value="create a new user">
             </form>
@@ -90,7 +114,9 @@
         font-family: BigNoodleTitling;
       }
 
-      .purchase_middle {}
+      .purchase_middle {
+        height: 570px;
+      }
 
       .purchase_izquierda {
         width: 40%;
@@ -124,12 +150,31 @@
         padding: 0;
       }
 
-      .purchase_form_field {
+      .field_group {
         display: block;
         margin: 10px auto;
         width: 280px;
-        padding: 10px;
         border: 1px solid #ddd;
+      }
+      .field_group span {
+        float: left;
+        border-right: 1px dotted #ff3939;
+        padding: 5px 8px;
+        margin: 0 auto;
+        width: 20px;
+        background: #FFEEEE;
+      }
+      .field_group span img{
+        margin: 5px auto;
+        display: block;
+      }
+
+      .field_group input {
+        float: left;
+        height: 100%;
+        padding: 8px;
+        width: auto;
+        border: 0;
       }
 
       .clear {
