@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Codefen">
+        <link rel="icon" type="image/png" href="favicon.ico">
+        <title>Codefen</title>
+        <script src="static/jquery.js"></script>
+        <script src="static/jquery-migrate.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body id="page-purchase-plans">
+
+      
+    <!-- include modules/nav_purchase.hbs -->
+    <header class="c-nav">
+    <nav class="navegacion_superior">
+      <ul>
+        <li><a href="/">codefen</a></li>
+        <li><a href="purchase_user.html">new customer</a></li>
+        <li><a href="">member access</a></li>
+        <br class="clear">
+      </ul>
+    </nav>
+    </header>
+    
+    <style media="screen">
+      .navegacion_superior {
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        width: 100%;
+      }
+    
+      .navegacion_superior ul {
+        margin: 0;
+        padding: 0;
+      }
+    
+      .navegacion_superior ul li {
+        float: left;
+        list-style: none;
+      }
+    
+      .navegacion_superior ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 12px;
+        display: block;
+      }
+    
+      .clear {
+        clear: both;
+      }
+    </style>
+
+    <div class="purchase_area">
+      <div class="purchase_main">
+        <div class="purchase_header">
+          <div class="user_class">
+            <ul>
+              <li><a href="">for companies</a></li>
+              <li><a href="">for hackers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="purchase_middle">
+          <div class="purchase_izquierda">
+            <form action="purchase_cashier.html">
+              <div class="purchase_form_group">
+                <h3>4. select your plan</h3>
+                <div class="plan_cards">
+                  <div class="plan_column_info">
+                    <h4>Basic survelliance service</h4>
+                    <ul>
+                      <li><a href="">Basic survelliance services</a></li>
+                      <li><a href="">One pentests on demand per month</a></li>
+                      <li><a href="">Space: one member</a></li>
+                    </ul>
+                  </div>
+                  <div class="plan_column_price">
+                    <a href="">$1,200</a>
+                    <span>yearly billed</span>
+                  </div>
+                  <br class="clear">
+                </div>
+                <div class="plan_cards">
+                  <div class="plan_column_info">
+                    <h4>Advance survelliance service</h4>
+                    <ul>
+                      <li><a href="">Advance survelliance services</a></li>
+                      <li><a href="">5 full checks on demand!</a></li>
+                      <li><a href="">Space: for 10 company members</a></li>
+                    </ul>
+                  </div>
+                  <div class="plan_column_price">
+                    <a href="">$3,000</a>
+                    <span>yearly billed</span>
+                  </div>
+                  <br class="clear">
+                </div>
+                <div class="plan_cards">
+                  <div class="plan_column_info">
+                    <h4>Dedicated survelliance</h4>
+                    <ul>
+                      <li><a href="">Full asset’s survelliance services.</a></li>
+                      <li><a href="">Full service: all web accesible resources</a></li>
+                      <li><a href="">We’ll be specially paranoid.</a></li>
+                    </ul>
+                  </div>
+                  <div class="plan_column_price">
+                    <a href="">$5,000</a>
+                    <span>yearly billed</span>
+                  </div>
+                  <br class="clear">
+                </div>
+                <input class="user_call" type="submit" value="proceed to checkout">
+              </div>
+            </form>
+          </div>
+          <!-- include modules/purchase_promo_cards.hbs -->
+          <div class="purchase_derecha">
+            <div class="company_header">
+              <img src="media/avs/docler_icon.png" alt="" class="company_av">
+              <div class="company_info">
+                <h1>Docler Holding</h1>
+                <a href="https://www.doclerholding.com" target="_blank">www.doclerholding.com</a>
+              </div>
+              <br class="clear">
+            </div>
+            <div class="resource_box">
+              <div class="resource">
+                <div class="resource_row_column"><img src="media/server_icon.png" alt="server icon"></div>
+                <div class="resource_row_column"><a href="">109.76.16.1</a><span>web server online</span></div>
+                <div class="resource_row_column"><a href="">docler-as</a><span>server location: <img src="media/areas/lu.png" alt=""></span></div>
+                <div class="resource_row_column"><a href="">86 miliseconds</a><span>local web delay</span></div>
+              </div>
+              <div class="resource">
+                <div class="resource_row_column"><img src="media/server_icon.png" alt="server icon"></div>
+                <div class="resource_row_column"><a href="">109.76.16.1</a><span>web server online</span></div>
+                <div class="resource_row_column"><a href="">docler-as</a><span>server location: <img src="media/areas/lu.png" alt=""></span></div>
+                <div class="resource_row_column"><a href="">86 miliseconds</a><span>local web delay</span></div>
+              </div>
+              <div class="resource">
+                <div class="resource_row_column"><img src="media/server_icon.png" alt="server icon"></div>
+                <div class="resource_row_column"><a href="">109.76.16.1</a><span>web server online</span></div>
+                <div class="resource_row_column"><a href="">docler-as</a><span>server location: <img src="media/areas/lu.png" alt=""></span></div>
+                <div class="resource_row_column"><a href="">86 miliseconds</a><span>local web delay</span></div>
+              </div>
+              <div class="resource">
+                <div class="resource_row_column"><img src="media/server_icon.png" alt="server icon"></div>
+                <div class="resource_row_column"><a href="">109.76.16.1</a><span>web server online</span></div>
+                <div class="resource_row_column"><a href="">docler-as</a><span>server location: <img src="media/areas/lu.png" alt=""></span></div>
+                <div class="resource_row_column"><a href="">86 miliseconds</a><span>local web delay</span></div>
+              </div>
+            </div>
+          </div>
+          
+          <style media="screen">
+            .purchase_derecha {
+              font-family: Poppins;
+              width: 50%;
+              float: left;
+              background: #fafafa;
+            }
+            .company_header {
+              padding: 13px;
+              border-bottom: 1px solid #ccc;
+            }
+            .company_av {
+              float: left;
+              display: block;
+            }
+            .company_info {
+              display: block;
+              float: left;
+              padding: 14px;
+            }
+            .company_info h1 {
+              font-family: poppins;
+              font-size: 14px;
+              font-weight: 600;
+            }
+            .company_info a{
+              color: #666;
+              font-size: 14px;
+              font-weight: 400;
+              text-decoration: none;
+            }
+            .resource_box {}
+            .resource {
+              display: flex;
+                  border-bottom: 1px solid #ccc;
+                  padding: 20px 0;
+            }
+            .resource_row_column {
+                  flex: auto;
+                  vertical-align: middle;
+            }
+            .resource_row_column img {
+              vertical-align: middle;
+              padding: 0 12px;
+            }
+          
+            .resource_row_column a {
+              color: #666;
+              font-size: 14px;
+              font-weight: 600;
+              text-decoration: none;
+              display: block;
+            }
+            .resource_row_column span {
+              color: #666;
+              font-size: 14px;
+              font-weight: 400;
+              text-decoration: none;
+            }
+            .resource_row_column a span img {}
+          
+            .clear {
+              clear: both;
+            }
+          
+          
+          
+          </style>
+          <br class="clear">
+        </div>
+      </div>
+    </div>
+
+    <style media="screen">
+      .purchase_area {
+        background: url('media/purchase_background.png') no-repeat;
+        min-height: 780px;
+        padding: 100px 0px;
+      }
+
+      .purchase_main {
+        max-width: 1100px;
+        margin: 50px auto;
+        display: block;
+        background: #fafafa;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, .05)
+      }
+
+      .purchase_header {
+        border-bottom: 1px dashed #ccc;
+      }
+
+      .user_class {}
+
+      .user_class ul {
+        padding: 0;
+        display: inline-flex;
+        margin: 0;
+        position: relative;
+        top: -40px;
+      }
+
+      .user_class ul li {
+        float: left;
+        list-style: none;
+        margin: 0 8px 0 0;
+        background: #fafafa;
+      }
+
+      .user_class ul li.seleccionado {
+        border-bottom: 7px solid #fff;
+      }
+
+      .user_class ul li a {
+        color: #9a9a9a;
+        font-size: 20px;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+        width: 100px;
+        text-align: center;
+        font-family: BigNoodleTitling;
+      }
+
+      .purchase_middle {
+        height: 570px;
+      }
+
+      .purchase_izquierda {
+        width: 40%;
+        float: left;
+        border-right: 1px dashed #ccc;
+        box-sizing: border-box;
+        height: 100%;
+        background: #fff;
+        min-width: 480px;
+      }
+
+      .purchase_form_group {}
+
+      .purchase_form_group h3 {
+        font-size: 25px;
+        margin: 30px auto 0;
+        display: block;
+        width: 300px;
+        padding: 0;
+      }
+
+      .plan_cards {
+        padding: 15px 20px;
+        border-top: 1px solid #eee;
+        display: flex;
+      }
+
+      .plan_cards:last-of-type {
+      border-bottom: 1px solid #eee
+      }
+
+      .plan_column_info {
+        float: left;
+        min-width: 330px;
+        flex: 1;
+      }
+
+      .plan_column_info h4 {
+        font-family: Poppins;
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .plan_column_info ul {
+        padding: 0px 30px;
+        margin: 10px 0px;
+      }
+
+      .plan_column_info ul li {
+        list-style-image: url('media/icon_check_02.png');
+      }
+
+      .plan_column_info ul li a {
+        font-family: Poppins;
+        font-weight: 400;
+        color: #333;
+        text-decoration: none;
+        font-size: 13px;
+
+      }
+
+      .plan_column_price {
+        flex: 1;
+        float: left;
+      }
+
+      .plan_column_price a {
+        font-size: 30px;
+        font-family: BigNoodleTitling;
+        color: #414141;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+
+      .plan_column_price a sup {
+        font-size: 40px;
+        color: #999;
+        text-decoration: underline;
+        position: relative;
+        top: -8px;
+        left: 4px;
+      }
+
+      .plan_column_price span {
+        display: block;
+        margin: 0 auto;
+        width: 110px;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 1px;
+        font-family: BigNoodleTitling;
+        font-size: 23px;
+        color: #999;
+      }
+
+
+
+      .user_call {
+        background: #ff2424;
+        color: #fff;
+        border: 0;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-family: Questrial;
+        margin: 22px auto;
+        display: block;
+        padding: 15px 60px;
+        font-size: 14px;
+      }
+
+
+
+      .clear {
+        clear: both;
+      }
+    </style>
+
+
+    <section class="m-footer">
+      <div class="c-container">
+        <div class="columns">
+          <div>
+            <h6>our services</h6>
+            <ul>
+              <li><a href="">automated survilliance</a></li>
+              <li><a href="">red team express</a></li>
+              <li><a href="">service features</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>for hackers</h6>
+            <ul>
+              <li><a href="">work remote & full time </a></li>
+              <li><a href="">submit your vulnerability</a></li>
+              <li><a href="">our rewards in bitcoin</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>codefen</h6>
+            <ul>
+              <li><a href="">our sales team</a></li>
+              <li><a href="">business partners</a></li>
+              <li><a href="">contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>resources</h6>
+            <ul>
+              <li><a href="">enciclopedia</a></li>
+              <li><a href="">educación</a></li>
+              <li><a href="">prescanner</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>social media</h6>
+            <ul>
+              <li><a href="">linkedin</a></li>
+              <li><a href="">facebook</a></li>
+              <li><a href="">youtube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end stacking here -->
+
+
+
+      <!-- script includes -->
+      <script type="text/javascript" src="js/main.js"></script>
+
+   </body>
+</html>
