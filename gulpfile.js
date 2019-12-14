@@ -198,8 +198,8 @@ function compileJs() {
     /* Scrollmagic plugin: jQuery */
     "src/js/lib/jquery.ScrollMagic.min.js",
 
-    /* Owl Carousel */
-    // "src/js/lib/owl.carousel.min.js",
+    /* Tiny Slider / Carousel */
+    "src/js/lib/tiny-slider.min.js",
 
     /* Fullpage */
     // "src/js/lib/fullpage.extensions.min.js",

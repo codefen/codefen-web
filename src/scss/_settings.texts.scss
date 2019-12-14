@@ -44,7 +44,20 @@ strong { font-weight: 600; }
 
 p {
   margin: 0px;
-  line-height: 1.7;
+  font-size: 14px;
+
+  // responsive
+  @include mq($from: tabletLandscape, $until: desktop) {
+    font-size: 14px;
+  }
+
+  @include mq($from: desktop) {
+    font-size: 14px;
+  }
+
+  @include mq($from: desktopExtraLarge) {
+    font-size: 15px;
+  } 
 }
 
 h1,h2,h3,h4,h5,h6,p,ul {

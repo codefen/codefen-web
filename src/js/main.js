@@ -2,6 +2,25 @@ jQuery(document).ready(function ($) {
 
 /*
 ===================================
+Showreel tabs
+===================================
+*/
+  var slider = tns({
+    container: '.showreel-container',
+    items: 1,
+    gutter: 30,
+    loop: false,
+    mode: 'gallery',
+    speed: 500,
+    navContainer: '.showreel-tabs',
+    controls: false,
+    slideBy: 'page'
+  });
+
+
+
+/*
+===================================
 Init scrollMagic
 ===================================
 */
