@@ -68,9 +68,16 @@ var tns=function(){Object.keys||(Object.keys=function(t){var e=[];for(var n in t
 jQuery(document).ready(function ($) {
   /*
   ===================================
+  Init scrollMagic
+  ===================================
+  */
+  var navScrollController = new ScrollMagic.Controller();
+  /*
+  ===================================
   Nav menu actions
   ===================================
   */
+
   var actualPage = $('body').attr('id');
   $('.c-nav a').removeClass('f-active');
 
@@ -85,6 +92,13 @@ jQuery(document).ready(function ($) {
   } else if (actualPage == 'page-purchase-user') {
     $('[href="purchase_user.html"]').addClass('f-active');
   }
+
+  new ScrollMagic.Scene({
+    triggerElement: "#mainHeaderArea",
+    triggerHook: 0,
+    offset: 50
+  }).setClassToggle('.c-nav', 'f-highlight') // .addIndicators('nav bar')
+  .addTo(navScrollController);
 });
 // jQuery(document).ready(function($) {
 // particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
@@ -219,46 +233,40 @@ jQuery(document).ready(function ($) {
   */
 
   setTimeout(function () {
-    TweenMax.to('#introArea .images img:first-child', .6, {
+    TweenMax.to('#mainHeaderArea .wrap-image img', .6, {
       delay: 0,
       opacity: 1,
-      top: '13vh',
-      rotation: 4,
+      transform: 'translateX(0)',
+      rotation: 0,
       ease: Power4.easeOut
     });
-  }, 700);
-  setTimeout(function () {
-    TweenMax.to('#introArea h1', .6, {
+    TweenMax.to('#mainHeaderArea h1', .6, {
       delay: 0,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease: Power4.easeOut
     });
-    TweenMax.to('#introArea h2', .6, {
+    TweenMax.to('#mainHeaderArea h2', .6, {
       delay: .1,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease: Power4.easeOut
     });
-    TweenMax.to('#introArea ul', .6, {
+    TweenMax.to('#mainHeaderArea ul', .6, {
       delay: .2,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease: Power4.easeOut
     });
-    TweenMax.to('#introArea a', .6, {
+    TweenMax.to('#mainHeaderArea a', .6, {
       delay: .3,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease: Power4.easeOut
     });
-  }, 600);
-  TweenMax.to('.c-nav', .6, {
-    delay: 1.5,
+  }, 300);
+  TweenMax.to('.c-nav', .4, {
+    delay: .2,
     transform: 'translateY(0)',
     ease: Power4.easeOut
   });
@@ -281,6 +289,28 @@ jQuery(document).ready(function ($) {
       duration: $('body').height()
     }).setTween(redLines, {
       y: "-40%",
+      ease: Linear.easeNone
+    }) // .addIndicators('')
+    .addTo(globalController);
+  }
+  /*
+  ===================================
+  Plans parallax
+  ===================================
+  */
+
+
+  var actualPage = $('body').attr('id');
+
+  if (actualPage == 'page-home') {
+    var background = $('.m-plans .c-extra-bg');
+    var startPoint = $('.m-plans').offset().top; // background.css({'top': startPoint});
+
+    new ScrollMagic.Scene({
+      triggerElement: ".m-plans",
+      duration: '100%'
+    }).setTween(background, {
+      y: "-230%",
       ease: Linear.easeNone
     }) // .addIndicators('')
     .addTo(globalController);
