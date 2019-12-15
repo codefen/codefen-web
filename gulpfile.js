@@ -1,30 +1,32 @@
 "use strict";
 
 const { src, dest, watch, series, parallel } = require('gulp');
-const concat       = require('gulp-concat');
-const rename       = require('gulp-rename');
-const uglify       = require('gulp-uglify');
-const notify       = require('gulp-notify');
-const notifier     = require('node-notifier');
-const plumber      = require('gulp-plumber');
-const newer        = require('gulp-newer');
-const imagemin     = require('gulp-imagemin');
-const sass         = require('gulp-sass');
-const postcss      = require('gulp-postcss');
-const sourcemaps   = require('gulp-sourcemaps');
-const autoprefixer = require('autoprefixer');
-const cssnano      = require('cssnano');
-const replace      = require('gulp-replace');
-const htmlmin      = require('gulp-htmlmin');
-const hb           = require('gulp-hb');
-const fs           = require('fs');
-const fse          = require('fs-extra');
-const Enquirer     = require('enquirer');
-const babel        = require('gulp-babel');
-const map          = require('map-stream');
-const enquirer     = new Enquirer();
-const browserSync  = require('browser-sync');
-const server       = browserSync.create();
+const concat        = require('gulp-concat');
+const rename        = require('gulp-rename');
+const uglify        = require('gulp-uglify');
+const notify        = require('gulp-notify');
+const notifier      = require('node-notifier');
+const plumber       = require('gulp-plumber');
+const newer         = require('gulp-newer');
+const imagemin      = require('gulp-imagemin');
+const sass          = require('gulp-sass');
+const postcss       = require('gulp-postcss');
+const sourcemaps    = require('gulp-sourcemaps');
+const autoprefixer  = require('autoprefixer');
+const cssnano       = require('cssnano');
+const replace       = require('gulp-replace');
+const htmlmin       = require('gulp-htmlmin');
+const hb            = require('gulp-hb');
+const fs            = require('fs');
+const fse           = require('fs-extra');
+const Enquirer      = require('enquirer');
+const babel         = require('gulp-babel');
+const map           = require('map-stream');
+const enquirer      = new Enquirer();
+const browserSync   = require('browser-sync');
+const server        = browserSync.create();
+var gulp            = require('gulp');
+var ghPages         = require('gulp-gh-pages');
 
 const paths = {
   static: {src: 'src/static/**/*', dest: 'build/static/'},
@@ -41,22 +43,12 @@ const paths = {
   }
 }
 
+//GH pages deply // no funciona...
+gulp.task('deploy', function() { return gulp.src('build/**/*').pipe(ghPages());});
+
 // Server
-
-function reload(done) {
-  server.reload();
-  done();
-}
-
-function serve(done) {
-  server.init({
-    server: {
-      baseDir: 'build/'
-    },
-    ui: false
-  });
-  done();
-}
+function reload(done) { server.reload(); done(); }
+function serve(done) { server.init({ server: { baseDir: 'build/' }, ui: false }); done();}
 
 // Watch changes
 
@@ -69,7 +61,6 @@ function watchTask() {
 }
 
 // Error notifications
-
 function customPlumber(errTitle) {
   return plumber({
     errorHandler: notify.onError({
