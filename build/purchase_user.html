@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Codefen">
+        <link rel="icon" type="image/png" href="favicon.ico">
+        <title>Codefen</title>
+        <script src="static/jquery.js"></script>
+        <script src="static/jquery-migrate.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body id="page-purchase-user">
+
+      
+    <!-- include modules/nav_purchase.hbs -->
+    <nav class="navegacion_superior">
+      <ul>
+        <li><a href="/">codefen</a></li>
+        <li><a href="purchase_user.html">new customer</a></li>
+        <li><a href="">member access</a></li>
+        <br class="clear">
+      </ul>
+    </nav>
+    
+    <style media="screen">
+      .navegacion_superior {
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        width: 100%;
+      }
+    
+      .navegacion_superior ul {
+        margin: 0;
+        padding: 0;
+      }
+    
+      .navegacion_superior ul li {
+        float: left;
+        list-style: none;
+      }
+    
+      .navegacion_superior ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 12px;
+        display: block;
+      }
+    
+      .clear {
+        clear: both;
+      }
+    </style>
+
+    <div class="purchase_area">
+      <div class="purchase_main">
+        <div class="purchase_header">
+          <div class="user_class">
+            <ul>
+              <li><a href="">for companies</a></li>
+              <li><a href="">for hackers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="purchase_middle">
+          <div class="purchase_izquierda">
+            <form action="purchase_confirm.html">
+              <div class="purchase_form_group">
+                <h3>1. organization information</h3>
+                <div class="field_group">
+                  <span><img src="media/form_icons/company.png" alt=""></span>
+                  <input type="text" placeholder="company name">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/web.png" alt=""></span>
+                  <input type="text" placeholder="www.main-web.com">
+                  <br class="clear">
+                </div>
+              </div>
+              <div class="purchase_form_group">
+                <h3>2. user information</h3>
+                <div class="field_group">
+                  <span><img src="media/form_icons/user.png" alt=""></span>
+                  <input type="text" placeholder="your username">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/mail.png" alt=""></span>
+                  <input type="text" placeholder="your email address">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/password.png" alt=""></span>
+                  <input type="password" placeholder="your password">
+                  <br class="clear">
+                </div>
+                <div class="field_group">
+                  <span><img src="media/form_icons/password.png" alt=""></span>
+                  <input type="password" placeholder="confirm your password">
+                  <br class="clear">
+                </div>
+              </div>
+              <input class="user_call" type="submit" value="create a new user">
+            </form>
+          </div>
+          <!-- include modules/purchase_promo_cards.hbs -->
+          <div class="purchase_derecha">
+            <div class="purchase_card">
+              <img src="media/circular_aim.png" alt="">
+              <div class="purchase_card_info">
+                <h2>request a pentest on demand</h2>
+                <p><strong>We believe security should be a run as process,</strong> we provide permanent survelliance instead of once in a year checks. </p>
+              </div>
+              <br class="clear">
+            </div>
+            <div class="purchase_card">
+              <img src="media/circular_bug.png" alt="">
+              <div class="purchase_card_info">
+                <h2>create reward programs</h2>
+                <p>Common security companies run scans once a year, instead we scan on daily basis, as well, we don’t waste a minute to communicate a flaw.</p>
+              </div>
+              <br class="clear">
+            </div>
+            <div class="purchase_card">
+              <img src="media/circular_pdf.png" alt="">
+              <div class="purchase_card_info">
+                <h2>express reporting</h2>
+                <p>Common security companies run scans once a year, instead we scan on daily basis, as well, we don’t waste a minute to communicate a flaw.</p>
+              </div>
+              <br class="clear">
+            </div>
+          </div>
+          
+          <style media="screen">
+            .purchase_derecha {
+              width: 50%;
+              float: left;
+              background: #fafafa;
+            }
+          
+            .purchase_card {
+              max-width: 470px;
+              margin: 20px;
+              padding: 18px;
+              display: flex;
+            }
+          
+            .purchase_card img {
+              max-width: 90px;
+              max-height: 90px;
+              flex: 1;
+              margin: 0px 10px;
+            }
+          
+            .purchase_card_info {
+              float: left;
+              flex: 1;
+              padding: 0 20px;
+            }
+          
+            .purchase_card_info h2 {
+              color: #878787;
+              margin: 20px 0px;
+              line-height: 6px;
+            }
+          
+            .purchase_card_info p {
+              font-size: 13px
+            }
+          </style>
+          <br class="clear">
+        </div>
+      </div>
+    </div>
+
+    <style media="screen">
+      .purchase_area {
+        background: url('media/purchase_background.png') no-repeat;
+        min-height: 780px;
+        padding: 100px 0px;
+      }
+
+      .purchase_main {
+        max-width: 1100px;
+        margin: 50px auto;
+        display: block;
+        background: #fafafa;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, .05)
+      }
+
+      .purchase_header {
+        border-bottom: 1px dashed #ccc;
+      }
+
+      .user_class {}
+
+      .user_class ul {
+        padding: 0;
+        display: inline-flex;
+        margin: 0;
+        position: relative;
+        top: -40px;
+      }
+
+      .user_class ul li {
+        float: left;
+        list-style: none;
+        margin: 0 8px 0 0;
+        background: #fafafa;
+      }
+
+      .user_class ul li.seleccionado {
+        border-bottom: 7px solid #fff;
+      }
+
+      .user_class ul li a {
+        color: #9a9a9a;
+        font-size: 20px;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+        width: 100px;
+        text-align: center;
+        font-family: BigNoodleTitling;
+      }
+
+      .purchase_middle {
+        height: 570px;
+      }
+
+      .purchase_izquierda {
+        width: 40%;
+        float: left;
+        border-right: 1px dashed #ccc;
+        box-sizing: border-box;
+        height: 100%;
+        background: #fff;
+      }
+
+      .user_call {
+        background: #ff2424;
+        color: #fff;
+        border: 0;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-family: Questrial;
+        margin: 22px auto;
+        display: block;
+        padding: 15px 60px;
+        font-size: 14px;
+      }
+
+      .purchase_form_group {}
+
+      .purchase_form_group h3 {
+        font-size: 25px;
+        margin: 30px auto 0;
+        display: block;
+        width: 300px;
+        padding: 0;
+      }
+
+      .field_group {
+        display: block;
+        margin: 10px auto;
+        width: 280px;
+        border: 1px solid #ddd;
+      }
+
+      .field_group span {
+        float: left;
+        border-right: 1px dotted #ff3939;
+        padding: 5px 8px;
+        margin: 0 auto;
+        width: 40px;
+        background: #FFEEEE;
+        box-sizing: border-box;
+        height: 40px;
+
+      }
+
+      .field_group span img {
+        margin: 5px auto;
+        display: block;
+      }
+
+      .field_group input {
+        float: left;
+        height: 100%;
+        padding: 13px;
+        width: calc(100% - 40px);
+        border: 0;
+        font-family: Questrial;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+
+
+    <section class="m-footer">
+      <div class="c-container">
+        <div class="columns">
+          <div>
+            <h6>our services</h6>
+            <ul>
+              <li><a href="">automated survilliance</a></li>
+              <li><a href="">red team express</a></li>
+              <li><a href="">service features</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>for hackers</h6>
+            <ul>
+              <li><a href="">work remote & full time </a></li>
+              <li><a href="">submit your vulnerability</a></li>
+              <li><a href="">our rewards in bitcoin</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>codefen</h6>
+            <ul>
+              <li><a href="">our sales team</a></li>
+              <li><a href="">business partners</a></li>
+              <li><a href="">contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>resources</h6>
+            <ul>
+              <li><a href="">enciclopedia</a></li>
+              <li><a href="">educación</a></li>
+              <li><a href="">prescanner</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6>social media</h6>
+            <ul>
+              <li><a href="">linkedin</a></li>
+              <li><a href="">facebook</a></li>
+              <li><a href="">youtube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end stacking here -->
+
+
+
+      <!-- script includes -->
+      <script type="text/javascript" src="js/main.js"></script>
+
+   </body>
+</html>
