@@ -33,48 +33,45 @@ Header animations
 ===================================
 */
   setTimeout(function() {
-    TweenMax.to('#introArea .images img:first-child', .6, {
+    TweenMax.to('#mainHeaderArea .wrap-image img', .6, {
       delay: 0,
       opacity: 1,
-      top: '13vh',
-      rotation: 4,
+      transform: 'translateX(0)',
+      rotation: 0,
       ease:  Power4.easeOut
     });
-  }, 700);
 
-  setTimeout(function() {
-    TweenMax.to('#introArea h1', .6, {
+    TweenMax.to('#mainHeaderArea h1', .6, {
       delay: 0,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease:  Power4.easeOut
     });
-    TweenMax.to('#introArea h2', .6, {
+
+    TweenMax.to('#mainHeaderArea h2', .6, {
       delay: .1,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease:  Power4.easeOut
     });
-    TweenMax.to('#introArea ul', .6, {
+
+    TweenMax.to('#mainHeaderArea ul', .6, {
       delay: .2,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease:  Power4.easeOut
     });
-    TweenMax.to('#introArea a', .6, {
+    
+    TweenMax.to('#mainHeaderArea a', .6, {
       delay: .3,
       opacity: 1,
-      transform: 'translateY(0)',
-      yPercent: 0,
+      transform: 'translateX(0)',
       ease:  Power4.easeOut
     });
-  }, 600);
+  }, 300);
 
-  TweenMax.to('.c-nav', .6, {
-    delay: 1.5,
+  TweenMax.to('.c-nav', .4, {
+    delay: .2,
     transform: 'translateY(0)',
     ease:  Power4.easeOut
   });
@@ -103,7 +100,27 @@ Red lines background
   }
 
 
+/*
+===================================
+Plans parallax
+===================================
+*/
+  var actualPage = $('body').attr('id');
 
+  if (actualPage == 'page-home') {
+    var background = $('.m-plans .c-extra-bg');
+    var startPoint = $('.m-plans').offset().top
+    
+    // background.css({'top': startPoint});
+
+    new ScrollMagic.Scene({
+      triggerElement: ".m-plans",
+      duration: '100%',
+    })
+    .setTween(background, {y: "-230%", ease: Linear.easeNone})
+    // .addIndicators('')
+    .addTo(globalController);    
+  }
 
 
 

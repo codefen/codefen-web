@@ -7,10 +7,18 @@
   left: 0;
   color: #ffffff;
   z-index: 100;
-  transition: .5s height;
+  transition: .5s all;
   background-color: rgba(0,0,0,0.3);
   transform: translateY(-100%);
   overflow-y: hidden;
+
+  &.f-highlight {
+    background-color: rgba(0,0,0,0.8);
+
+    .f-start {
+      color: #ff3939;
+    }
+  }
 
   .c-container {
     height: 100%;
