@@ -7,9 +7,9 @@
     "cssnano": "^4.1.10",
     "enquirer": "^2.3.0",
     "fs-extra": "^8.0.1",
+    "gh-pages": "^2.1.1",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-gh-pages": "^0.5.4",
     "gulp-hb": "^8.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^6.0.0",
@@ -33,6 +33,7 @@
   "scripts": {
     "stylelint": "stylelint 'src/**/*.scss'; exit 0",
     "build": "gulp",
+    "deploy": "gh-pages -d build",
     "build:production": "gulp && gulp build:production"
   },
   "browserslist": [

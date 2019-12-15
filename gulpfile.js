@@ -26,7 +26,7 @@ const enquirer      = new Enquirer();
 const browserSync   = require('browser-sync');
 const server        = browserSync.create();
 var gulp            = require('gulp');
-var ghPages         = require('gulp-gh-pages');
+var ghPages         = require('gh-pages');
 
 const paths = {
   static: {src: 'src/static/**/*', dest: 'build/static/'},
@@ -39,19 +39,17 @@ const paths = {
     dest: 'dist',
     title: '',
     url: '',
-    images: '/wp-content/uploads/sites/'
+    images: '/media'
   }
 }
 
-//GH pages deply // no funciona...
-gulp.task('deploy', function() { return gulp.src('build/**/*').pipe(ghPages());});
 
 // Server
 function reload(done) { server.reload(); done(); }
 function serve(done) { server.init({ server: { baseDir: 'build/' }, ui: false }); done();}
 
-// Watch changes
 
+// Watch changes
 function watchTask() {
   watch(paths.styles.src, compileCss);
   watch(paths.images.src, series(images, reload));
@@ -59,6 +57,7 @@ function watchTask() {
   watch('src/**/*.hbs', series(compileHbs, reload));
   watch(paths.scripts.src, series(transpileJs, compileJs, reload));
 }
+
 
 // Error notifications
 function customPlumber(errTitle) {
@@ -71,8 +70,8 @@ function customPlumber(errTitle) {
   });
 }
 
-// Development tasks
 
+// Development tasks
 function compileHtml() {
   let out = paths.html.dest;
 
@@ -134,11 +133,7 @@ function images() {
 
 function transpileJs() {
   return src([
-
-    /* Components: optional */
     'src/js/components/*.js',
-
-    /* Main scripts */
     'src/js/main.js'
   ])
   .pipe(babel())
@@ -148,53 +143,17 @@ function transpileJs() {
 
 function compileJs() {
   return src([
-    // Libs
-    /* Uncomment the library you need below */
-
-    /* Body Scroll Lock */
     "src/js/lib/bodyScrollLock.min.js",
-
-    /* Particles */
     "src/js/lib/particles.min.js",
-
-    /* scrollDetector */
-    // "src/js/lib/lodash.min.js",
-    // "src/js/lib/scrollDetector.js",
-
-    /* Lottie */
-    // "src/js/lib/lottie.min.js",
-
-    /* Greensock */
     "src/js/lib/TweenMax.min.js",
     "src/js/lib/TimelineMax.min.js",
-
-    /* Greensock plugin: GSAP */
-    "src/js/lib/jquery.gsap.min.js",
-
-    /* Greensock plugin: Draw SVG Plugin */
-    // "src/js/lib/drawsvgplugin.js",
-
-    /* Scrollmagic */
+    "src/js/lib/jquery.gsap.min.js",  
     "src/js/lib/ScrollMagic.min.js",
-
-    /* Scrollmagic plugin: Indicators */
     "src/js/lib/debug.addIndicators.min.js",
-
-    /* Scrollmagic plugin: GSAP */
     "src/js/lib/animation.gsap.min.js",
-
-    /* Scrollmagic plugin: Velocity */
     "src/js/lib/animation.velocity.min.js",
-
-    /* Scrollmagic plugin: jQuery */
     "src/js/lib/jquery.ScrollMagic.min.js",
-
-    /* Tiny Slider / Carousel */
     "src/js/lib/tiny-slider.min.js",
-
-    /* Fullpage */
-    // "src/js/lib/fullpage.extensions.min.js",
-    // "src/js/lib/fullpage.scrollHorizontally.min.js",
 
     /* transpiled Main in build */
     "build/js/main.js"
@@ -203,15 +162,16 @@ function compileJs() {
     .pipe(dest(paths.scripts.dest));
 }
 
-// Components
 
-function componentsHtml() {
-  return src('src/components.html')
-    .pipe(dest('build'));
+//  sigue sin funcionar
+// deploy GitHub Pages
+function deploy() {
+  return ghPages.publish('build', function(){console.error('error')})
 }
 
-// Production tasks
 
+// PARA USARSE MAS ADELANTE
+// Production tasks
 function productionHtml() {
   return src('build/*.html')
     .pipe(replace('media/', paths.production.images.dest))
@@ -361,7 +321,8 @@ exports.css = css;
 exports.js = js;
 exports.hbs = hbs;
 exports.serve = series(parallel(html, css, js),serve, watchTask);
-exports.buildProduction = series(productionCss, productionHtml, productionJs, productionSvg, componentsHtml);
+exports.buildProduction = series(productionCss, productionHtml, productionJs, productionSvg);
+exports.deploy = deploy;
 
 exports.run = run;
 
