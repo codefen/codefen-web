@@ -17,7 +17,6 @@
 
       
     <!-- include modules/nav_purchase.hbs -->
-    <header class="c-nav">
     <nav class="navegacion_superior">
       <ul>
         <li><a href="/">codefen</a></li>
@@ -26,7 +25,6 @@
         <br class="clear">
       </ul>
     </nav>
-    </header>
     
     <style media="screen">
       .navegacion_superior {
@@ -301,15 +299,20 @@
         width: 280px;
         border: 1px solid #ddd;
       }
+
       .field_group span {
         float: left;
         border-right: 1px dotted #ff3939;
         padding: 5px 8px;
         margin: 0 auto;
-        width: 20px;
+        width: 40px;
         background: #FFEEEE;
+        box-sizing: border-box;
+        height: 40px;
+
       }
-      .field_group span img{
+
+      .field_group span img {
         margin: 5px auto;
         display: block;
       }
@@ -317,9 +320,13 @@
       .field_group input {
         float: left;
         height: 100%;
-        padding: 8px;
-        width: auto;
+        padding: 13px;
+        width: calc(100% - 40px);
         border: 0;
+        font-family: Questrial;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
 
       .clear {
         clear: both;
