@@ -22,13 +22,13 @@
                 <p>Por favor ingrese su código de verificación para validar su dirección de email.</p>
                 <img src="media/purchase_verificacion.png" alt="">
                 <div class="field_group">
-                  <span><img src="media/form_icons/company.png" alt=""></span>
-                  <input type="text">
+                  <span><img src="media/form_icons/mail.png" alt=""></span>
+                  <input type="text" placeholder="email address" disabled>
                   <br class="clear">
                 </div>
                 <div class="field_group">
                   <span><img src="media/form_icons/company.png" alt=""></span>
-                  <input type="text">
+                  <input type="text" placeholder="confirmation code">
                   <br class="clear">
                 </div>
                 <input class="user_call" type="submit" value="validate user">
@@ -147,15 +147,20 @@
         width: 280px;
         border: 1px solid #ddd;
       }
+
       .field_group span {
         float: left;
         border-right: 1px dotted #ff3939;
         padding: 5px 8px;
         margin: 0 auto;
-        width: 20px;
+        width: 40px;
         background: #FFEEEE;
+        box-sizing: border-box;
+        height: 40px;
+
       }
-      .field_group span img{
+
+      .field_group span img {
         margin: 5px auto;
         display: block;
       }
@@ -163,9 +168,12 @@
       .field_group input {
         float: left;
         height: 100%;
-        padding: 8px;
-        width: auto;
+        padding: 13px;
+        width: calc(100% - 40px);
         border: 0;
+        font-family: Questrial;
+        box-sizing: border-box;
+        font-size: 14px;
       }
 
       .clear {

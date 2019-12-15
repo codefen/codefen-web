@@ -59,9 +59,11 @@
   .service_card {
     background: #fff;
     max-width: 600px;
-    margin: 20px;
+    margin: 30px;
     padding: 18px;
     display: flex;
+    zoom: 0.9;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .05);
   }
 
   .service_card img {
@@ -84,21 +86,22 @@
 
   .service_card_info p {
     font-size: 14px;
+    line-height: 22px;
   }
 
   .descripcion_derecha {
     width: 50%;
     float: left;
-    border-right: 1px dashed #999;
+    border-right: 1px dashed #DDD;
     box-sizing: border-box;
   }
 
   .descripcion_derecha h1 {
-    font-size: 59px;
+    font-size: 52px;
     text-align: center;
     color: #000;
     padding: 0;
-    padding: 60px 0 10px 0;
+    padding: 30px 0 10px 0;
     margin: 0;
   }
 
@@ -118,12 +121,18 @@
   .descripcion_derecha p {
     width: 530px;
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
     margin: 20px auto;
+    line-height: 22px;
   }
 
   .descripcion_derecha img {
     display: block;
     margin: 50px auto;
+    max-width: 450px;
+  }
+
+  .clear {
+    clear: both;
   }
 </style>
