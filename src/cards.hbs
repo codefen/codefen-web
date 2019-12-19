@@ -10,9 +10,9 @@
         <div class="card">
           <h1>how to estimate the value of a security flaw?</h1>
           <div class="infobox">
+            <div class="circle"><span>30%</span></div>
             <div class="infobox-derecha">
-              <h2>brechas masivas de información</h2>
-              <p>Se considera que las brechas masivas de información que comprenden desde 1 million a 50 milliones de datos perdidos, comprenden costos de entre $40 millones y $350 millones respectivamente.</p>
+              <p>A critical vulnerability, with a cvss score between 9 and 10 could cost up to $2,000,000 usd. This represents a 30% difference between 2018 and 2019.</p>
             </div>
             <br class="clear">
           </div>
@@ -56,25 +56,28 @@
         <!-- a card -->
         <div class="card">
           <div class="infobox">
-            <img src="" alt="">
+            <img src="media\cards\icon_price_a.png" alt="">
             <div class="infobox-derecha">
               <h2>el costo de una brecha de seguridad</h2>
               <p>Gobalmente, el impacto de una filtración de información promedia los $3.9 millones de dólares, no obstante, las filtraciónes mas importantes pueden costar cientos de millones de dolares.</p>
             </div>
+            <br class="clear">
           </div>
           <div class="infobox">
-            <img src="" alt="">
+            <img src="media\cards\icon_price_b.png" alt="">
             <div class="infobox-derecha">
               <h2>la información expuesta determin a el costo</h2>
               <p>Los informes del 2018 presentan un costo promedio de $2.2 milliones en indidentes con menos de 10 mil records y hasta $6.9 millones en incidentes que exponen información de más de 50 mil personas.</p>
             </div>
+            <br class="clear">
           </div>
           <div class="infobox">
-            <img src="" alt="">
+            <img src="media\cards\icon_price_c.png" alt="">
             <div class="infobox-derecha">
               <h2>brechas masivas de información</h2>
               <p>Se considera que las brechas masivas de información que comprenden desde 1 million a 50 milliones de datos perdidos, comprenden costos de entre $40 millones y $350 millones respectivamente.</p>
             </div>
+            <br class="clear">
           </div>
         </div>
 
@@ -88,15 +91,15 @@
       }
 
       .cards-holder {
-        padding-top: 100px;
+        padding-top: 180px;
       }
 
       .card {
         background: #fff;
-    width: 680px;
-    height: 560px;
-    margin: 20px;
-    float: left;
+        width: 680px;
+        height: 560px;
+        margin: 20px;
+        float: left;
       }
 
       .card h1 {
@@ -117,7 +120,17 @@
         background: #fff;
         padding: 18px;
         border-bottom: 1px dotted #ccc;
+      }
 
+      .circle {
+        background: #ff3939;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        line-height: 80px;
+        text-align: center;
+        color: #fff;
+        float: left;
       }
 
       .infobox img {
@@ -128,12 +141,12 @@
       .infobox-derecha {
         float: left;
         padding: 0 20px;
-        width: 410px;
+        width: 420px;
       }
 
       .infobox-derecha h2 {
         margin: 5px 0px;
-    font-size: 26px;
+        font-size: 26px;
       }
 
       .infobox-derecha p {
@@ -141,7 +154,11 @@
         line-height: 22px;
       }
 
-      .info-source {}
+      .info-source {
+        background: #eee;
+        padding: 10px 0;
+        font-family: Questrial;
+      }
 
       .clear {
         clear: both;
