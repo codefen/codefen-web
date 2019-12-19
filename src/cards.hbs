@@ -1,0 +1,157 @@
+{{#> library/main_wrap bodyId="infosec-cards"}}
+  {{#*inline "page-block"}}
+
+    <!-- include modules/nav_purchase.hbs -->
+    {{> nav_purchase }}
+
+    <div class="main_cards_box">
+      <div class="cards-holder">
+        <!-- a card -->
+        <div class="card">
+          <h1>how to estimate the value of a security flaw?</h1>
+          <div class="infobox">
+            <img src="media/cards/issues_years.png" alt="" class="infobox-izquierda">
+            <div class="infobox-derecha">
+              <h2>brechas masivas de información</h2>
+              <p>Se considera que las brechas masivas de información que comprenden desde 1 million a 50 milliones de datos perdidos, comprenden costos de entre $40 millones y $350 millones respectivamente.</p>
+            </div>
+          </div>
+          <img src="" alt="" class="full_sized_media">
+          <p class="info-source">data source: www.zerodium.com</p>
+        </div>
+        <!-- a card -->
+        <div class="card">
+          <div class="infobox">
+            <img src="media/cards/icon_measure.png" alt="" class="infobox-izquierda">
+            <div class="infobox-derecha">
+              <h2>Vulnerability valuation</h2>
+              <p>Until today, there’s no approach to systematically valuate the price of a vulnerability, hence it’s common to estimate it’s value in proportion to it’s potential impact and assosiated risk.</p>
+            </div>
+          </div>
+          <div class="infobox">
+            <img src="media/cards/icon_risk.png" alt="" class="infobox-izquierda">
+            <div class="infobox-derecha">
+              <h2>implicit risk</h2>
+              <p>En primera instancia se evalua el potencial de la vulnerabilidad. Naturalmente, a mayores implicancias, más aumenta su peso y su clasificación. Es común la utilización de sistemas de score.</p>
+            </div>
+          </div>
+          <div class="infobox">
+            <img src="media/cards/icon_users.png" alt="" class="infobox-izquierda">
+            <div class="infobox-derecha">
+              <h2>usuarios afectados</h2>
+              <p>Una vez evaluada la vulnerabilidad, debemos considerar también, la cantidad de usuarios afectados por la misma, una vulnerabilidad en una aplicación sin usuarios, carece de valor.</p>
+            </div>
+          </div>
+
+        </div>
+        <!-- a card -->
+        <div class="card">
+          <h1>cuál es el costo de una brecha de seguridad?</h1>
+          <img src="media/cards/brechas-pais.png" alt="" class="full_sized_media">
+          <img src="media/cards/brechas-año.png" alt="" class="full_sized_media">
+        </div>
+        <!-- a card -->
+        <div class="card">
+          <div class="infobox">
+            <img src="" alt="" class="infobox-izquierda">
+            <div class="infobox-derecha">
+              <h2>el costo de una brecha de seguridad</h2>
+              <p>Gobalmente, el impacto de una filtración de información promedia los $3.9 millones de dólares, no obstante, las filtraciónes mas importantes pueden costar cientos de millones de dolares.</p>
+            </div>
+          </div>
+          <div class="infobox">
+            <img src="" alt="" class="infobox-izquierda">
+            <div class="infobox-derecha">
+              <h2>la información expuesta determin a el costo</h2>
+              <p>Los informes del 2018 presentan un costo promedio de $2.2 milliones en indidentes con menos de 10 mil records y hasta $6.9 millones en incidentes que exponen información de más de 50 mil personas.</p>
+            </div>
+          </div>
+          <div class="infobox">
+            <img src="" alt="" class="infobox-izquierda">
+            <div class="infobox-derecha">
+              <h2>brechas masivas de información</h2>
+              <p>Se considera que las brechas masivas de información que comprenden desde 1 million a 50 milliones de datos perdidos, comprenden costos de entre $40 millones y $350 millones respectivamente.</p>
+            </div>
+          </div>
+        </div>
+
+        <br class="clear">
+      </div>
+    </div>
+
+    <style media="screen">
+      .main_cards_box {
+        background: url(media/pixeled_background.png);
+      }
+
+      .cards-holder {
+        padding-top: 100px;
+      }
+
+      .card {
+        background: #fff;
+        width: 600px;
+        height: 560px;
+        margin: 20px;
+        float: left;
+      }
+
+      .card h1 {
+        font-size: 28px;
+        color: #fff;
+        position: relative;
+        top: -50px;
+        font-weight: 200;
+      }
+
+      .full_sized_media {
+        margin: 0 auto;
+        padding: 10px;
+        display: block;
+      }
+
+      .infobox {
+        background: #fff;
+        max-width: 600px;
+        margin: 30px;
+        padding: 18px;
+        display: flex;
+        zoom: 0.9;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, .05);
+      }
+
+      .infobox-izquierda {
+        max-width: 150px;
+        max-height: 150px;
+        flex: 1;
+        margin: 0px 10px;
+      }
+
+      .infobox-derecha {
+        float: left;
+        flex: 1;
+        padding: 0 20px;
+      }
+
+      .infobox-derecha h2 {
+        margin: 20px 0px;
+        line-height: 6px;
+      }
+
+      .infobox-derecha p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .info-source {}
+
+      .clear {
+        clear: both;
+      }
+    </style>
+
+
+    {{> ending }}
+
+    {{/inline}}
+    {{/library/main_wrap}}
