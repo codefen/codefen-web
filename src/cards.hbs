@@ -5,6 +5,7 @@
     {{> nav_purchase }}
 
     <div class="main_cards_box">
+      <div class="cards-arrows"><span class="c-glyph glyph-21"></span><span class="c-glyph glyph-20"></span></div>
       <div class="cards-holder">
         <!-- a card -->
         <div class="card">
@@ -91,22 +92,42 @@
       }
 
       .cards-holder {
-        padding-top: 180px;
+        margin-top: 120px;
+        margin-bottom: 70px;
+      }
+
+      .main_cards_box .cards-arrows {
+        position: absolute;
+        right: 80px;
+        top: 90px;        
+      }
+
+      .main_cards_box .cards-arrows .c-glyph {
+        color: white;
+        font-size: 25px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+
+      .main_cards_box .cards-arrows .c-glyph:hover {
+        opacity: 0.8;
       }
 
       .card {
         background: #fff;
-        width: 680px;
+        /*width: 680px;*/
         height: 560px;
-        margin: 20px;
+        margin: 0 10px;
+        padding: 20px;
         float: left;
+        pointer-events: none;
       }
 
       .card h1 {
         font-size: 28px;
         color: #fff;
         position: relative;
-        top: -50px;
+        top: -70px;
         font-weight: 200;
       }
 
@@ -156,7 +177,9 @@
 
       .info-source {
         background: #eee;
-        padding: 10px 0;
+        padding: 10px 20px;
+        margin-left: -20px;
+        margin-right: -20px;
         font-family: Questrial;
       }
 

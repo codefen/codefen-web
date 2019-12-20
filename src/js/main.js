@@ -1,21 +1,51 @@
 jQuery(document).ready(function ($) {
 
+
+/*
+===================================
+Cards
+===================================
+*/
+  var actualPage = $('body').attr('id');
+
+  if (actualPage == 'infosec-cards') {
+    var slider = tns({
+      container: '.cards-holder',
+      items: 2,
+      loop: false,
+      speed: 500,
+      controlsContainer: '.cards-arrows',
+      mouseDrag: true,
+      slideBy: 'page'
+    }); 
+  }
+
+
+
+
+
+
 /*
 ===================================
 Showreel tabs
 ===================================
 */
-  var slider = tns({
-    container: '.showreel-container',
-    items: 1,
-    gutter: 30,
-    loop: false,
-    mode: 'gallery',
-    speed: 500,
-    navContainer: '.showreel-tabs',
-    controls: false,
-    slideBy: 'page'
-  });
+  var actualPage = $('body').attr('id');
+
+  if (actualPage == 'page-home') {
+    var slider = tns({
+      container: '.showreel-container',
+      items: 1,
+      gutter: 30,
+      loop: false,
+      mode: 'gallery',
+      speed: 500,
+      navContainer: '.showreel-tabs',
+      controls: false,
+      slideBy: 'page'
+    });   
+  }
+
 
 
 
