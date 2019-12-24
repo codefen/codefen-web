@@ -1,0 +1,120 @@
+{{#> library/main_wrap bodyId="infosec-cards"}}
+  {{#*inline "page-block"}}
+
+    <!-- include modules/nav_purchase.hbs -->
+    {{> nav_purchase }}
+
+    <div class="background">
+      <div class="encuadre">
+        <div class="sidebar">
+          <h3>application bugs and vulnerabilities</h3>
+          <ul>
+            <li><a href="">cross-site scripting</a></li>
+            <li><a href="">cross-site request forgery</a></li>
+            <li><a href="">inyecciones de xpath</a></li>
+            <li><a href="">inyecciones de SQL</a></li>
+          </ul>
+          <h3>techniques employeed by hackers</h3>
+          <ul>
+            <li><a href="">cash overflow</a></li>
+            <li><a href="">HTTP response splitting</a></li>
+            <li><a href="">cache poisoning</a></li>
+            <li><a href="">HTTP response splitting</a></li>
+          </ul>
+        </div>
+        <div class="page">
+          <h1>permanent infrastructure monitoring </h1>
+          <p>We believe security should be a run as process, we provide permanent survelliance instead of once in a year checks. Vulnerabilities found are notified on demand thru our plataform.</p>
+          <hr>
+          <h2>express reporting</h2>
+          <p>Common security companies run scans once a year, instead we scan on daily basis, as well, we don’t waste a minute to communicate a flaw, we address issues as soon as we can.</p>
+        </div>
+        <br class="clear">
+      </div>
+    </div>
+
+    <style media="screen">
+      .background {
+        background: url(media/pixeled_background.png);
+        background-attachment: fixed;
+      }
+
+      .encuadre {
+        padding-top: 80px;
+        margin: 0 auto;
+        display: table;
+        max-width: 1000px;
+      }
+
+      .sidebar {
+        display: table-cell;
+        background: red;
+        min-width: 320px;
+        margin-right: 10px;
+        text-align: right;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .sidebar h3 {
+        color: #fff;
+        font-size: 22px;
+        padding: 40px 30px 10px 0;
+        margin: 0;
+      }
+
+      .sidebar ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        list-style: none;
+      }
+
+      .sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        padding: 8px 30px;
+        display: block;
+      }
+
+      .page {
+        background: #fff;
+        max-width: 660px;
+        padding: 60px;
+        box-sizing: border-box;
+        min-height: 1160px;
+        display: block;
+      }
+
+      .page h1 {
+        font-size: 42px;
+      }
+
+      .page h2 {
+        font-size: 34px;
+      }
+
+      .page p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      .page hr {
+        margin: 20px 0;
+        border-top: 1px dashed #bbb;
+        border-bottom: 0;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+
+
+    {{> ending }}
+
+    {{/inline}}
+    {{/library/main_wrap}}
